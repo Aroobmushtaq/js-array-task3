@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //calculate sum of two number
+        function sum(a, b) {
+            return a + b
+        }
+        let num1 = 3
+        let num2 = 3
+        let result = sum(num1, num2)
+        console.log("sum of two number is", result)
+        //program to find max number in array
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let max = array[0]
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i]
+            }
+        }
+        console.log("maximum number is", max)
+        // write a function to take an array of number and retun new array with even number only
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        console.log("orignal array is", arr)
+        let data = arr.filter((num) => num % 2 === 0)
+        console.log("array with even number", data)
+        // //reverse a string
+        function reverse(str) {
+            const revstr = str.split('').reverse('').join('')
+            console.log(revstr)
+        }
+        reverse("Aroob")
+        reverse("Hadia")
+        //check given string is plandrom or not
+        function palindrome(string) {
+            const len = string.length
+            for (let i = 0; i < len / 2; i++) {
+                if (string[i] !== string[len - 1 - i]) {
+                    return "it is not palindrome"
+                }
+            }
+            return "it is a palindrome"
+        }
+        const string = prompt("enter string")
+        const value = palindrome(string)
+        console.log(value)
+
+    </script>
+</body>
+
+</html>
